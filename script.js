@@ -15,8 +15,8 @@ const platformStart = canvas.height - 50;
 
 // const gravity = 0.29;
 // const bounceVelocity = -12.5;
-const gravity = 0.59;
-const bounceVelocity = -17.5;
+const gravity = 0.79;
+const bounceVelocity = -19.5;
 
 const drag = 10;
 
@@ -233,6 +233,7 @@ leftBtn.addEventListener('touchstart', function() {
 });
 
 leftBtn.addEventListener('touchend', function() {
+
     keydown = false;
 });
 
@@ -245,7 +246,22 @@ rightBtn.addEventListener('touchstart', function() {
 rightBtn.addEventListener('touchend', function() {
     keydown = false;
 });
+// Добавляем обработчик события touchmove для предотвращения стандартного поведения при касании
+leftBtn.addEventListener('touchmove', function(event) {
+    event.preventDefault();
+});
 
+rightBtn.addEventListener('touchmove', function(event) {
+    event.preventDefault();
+});
+
+leftBtn.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+});
+
+rightBtn.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+});
 // Добавляем обработчик события touchmove для предотвращения стандартного поведения при касании
 leftBtn.addEventListener('touchmove', function(event) {
     event.preventDefault();

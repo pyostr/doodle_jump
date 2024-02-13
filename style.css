@@ -34,7 +34,12 @@ canvas{
     height: 100px;
     border-radius: 50%;
     font-size: 50px;
-
+    -webkit-touch-callout: none; /* Отключение вызова контекстного меню при удержании на iOS */
+    -webkit-user-select: none; /* Отключение выбора текста на iOS */
+    -khtml-user-select: none; /* Отключение выбора текста на Konqueror (браузер на базе KDE) */
+    -moz-user-select: none; /* Отключение выбора текста на Firefox */
+    -ms-user-select: none; /* Отключение выбора текста в Internet Explorer */
+    user-select: none; /* Общее отключение выбора текста */
 }
 @media screen and (max-height: 700px){
     canvas{
