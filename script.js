@@ -238,4 +238,13 @@ rightBtn.addEventListener('touchstart', function() {
 rightBtn.addEventListener('touchend', function() {
     keydown = false;
 });
+
+// Добавляем обработчик события touchmove для предотвращения стандартного поведения при касании
+leftBtn.addEventListener('touchmove', function(event) {
+    event.preventDefault();
+});
+
+rightBtn.addEventListener('touchmove', function(event) {
+    event.preventDefault();
+});
 requestAnimationFrame(loop);
