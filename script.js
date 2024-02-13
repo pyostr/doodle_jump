@@ -254,4 +254,12 @@ leftBtn.addEventListener('touchmove', function(event) {
 rightBtn.addEventListener('touchmove', function(event) {
     event.preventDefault();
 });
+
+leftBtn.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+});
+
+rightBtn.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+});
 requestAnimationFrame(loop);
