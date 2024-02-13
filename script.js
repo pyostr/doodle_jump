@@ -5,24 +5,24 @@ const context = canvas.getContext('2d')
 let score = 0;
 
 
-const platformWidth = 80;
-const platformHeight = 20;
+const platformWidth = 90;
+const platformHeight = 17;
 const platformStart = canvas.height - 50;
 
 // ПК
 
 // Мобильный
 
-// const gravity = 0.29;
-// const bounceVelocity = -12.5;
-const gravity = 0.79;
-const bounceVelocity = -19.5;
+const gravity = 0.29;
+const bounceVelocity = -12.5;
+// const gravity = 0.79;
+// const bounceVelocity = -19.5;
 
 const drag = 10;
 
 
 let minPlatformSpace = 130;
-let maxPlatformSpace = 20;
+let maxPlatformSpace = 50;
 
 let platforms = [
     {
@@ -133,15 +133,15 @@ function loop(){
         context.fillRect(platform.x, platform.y, platformWidth, platformHeight)
 
         // Генерация случайных красных точек
-        const numDots = Math.floor(Math.random() * 3) + 1; // Случайное количество точек от 1 до 3
-        context.fillStyle = 'red';
-        for (let i = 0; i < numDots; i++) {
-            const dotX = platform.x + Math.random() * platformWidth; // Случайная X-координата точки на платформе
-            const dotY = platform.y - Math.random() * platformHeight; // Случайная Y-координата точки на платформе
-            context.beginPath();
-            context.arc(dotX, dotY, 3, 0, Math.PI * 2); // Рисование круглой точки
-            context.fill();
-        }
+        // const numDots = Math.floor(Math.random() * 3) + 1; // Случайное количество точек от 1 до 3
+        // context.fillStyle = 'red';
+        // for (let i = 0; i < numDots; i++) {
+        //     const dotX = platform.x + Math.random() * platformWidth; // Случайная X-координата точки на платформе
+        //     const dotY = platform.y - Math.random() * platformHeight; // Случайная Y-координата точки на платформе
+        //     context.beginPath();
+        //     context.arc(dotX, dotY, 3, 0, Math.PI * 2); // Рисование круглой точки
+        //     context.fill();
+        // }
         if (
             doodle.dy > 0 &&
 
