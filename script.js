@@ -9,10 +9,18 @@ const platformWidth = 65;
 const platformHeight = 20;
 const platformStart = canvas.height - 50;
 
+// ПК
 
-const gravity = 0.29;
+// const gravity = 0.29;
+// const bounceVelocity = -12.5;
+
+// Мобильный
+
+const gravity = 0.59;
+const bounceVelocity = -19.5;
+
 const drag = 0.3;
-const bounceVelocity = -12.5;
+
 
 let minPlatformSpace = 150;
 let maxPlatformSpace = 10;
