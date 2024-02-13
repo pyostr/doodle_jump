@@ -13,10 +13,10 @@ const platformStart = canvas.height - 50;
 
 // Мобильный
 
-const gravity = 0.29;
-const bounceVelocity = -12.5;
-// const gravity = 0.79;
-// const bounceVelocity = -19.5;
+// const gravity = 0.29;
+// const bounceVelocity = -12.5;
+const gravity = 0.79;
+const bounceVelocity = -19.5;
 
 const drag = 10;
 
