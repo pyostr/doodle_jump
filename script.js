@@ -21,7 +21,7 @@ const bounceVelocity = -19.5;
 const drag = 10;
 
 
-let minPlatformSpace = 150;
+let minPlatformSpace = 130;
 let maxPlatformSpace = 10;
 
 let platforms = [
