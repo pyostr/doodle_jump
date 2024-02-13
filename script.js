@@ -22,7 +22,7 @@ const drag = 10;
 
 
 let minPlatformSpace = 130;
-let maxPlatformSpace = 10;
+let maxPlatformSpace = 20;
 
 let platforms = [
     {
