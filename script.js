@@ -166,6 +166,7 @@ function loop(){
     context.fillText('Очки: ' + score, 10, 30);
 
     context.fillStyle = 'red'
+    context.width = '139px'
     context.fillRect(doodle.x, doodle.y, doodle.width, doodle.height)
 
     prevDoodleY = doodle.y
@@ -191,4 +192,29 @@ document.addEventListener('keydown', function (e){
 document.addEventListener('keyup', function (e){
     keydown = false;
 })
+
+
+const leftBtn = document.getElementById('leftBtn');
+const rightBtn = document.getElementById('rightBtn');
+
+// Добавляем обработчики событий для кнопок
+leftBtn.addEventListener('mousedown', function() {
+    keydown = true;
+    playerDir = -1;
+    doodle.dx = -3;
+});
+
+leftBtn.addEventListener('mouseup', function() {
+    keydown = false;
+});
+
+rightBtn.addEventListener('mousedown', function() {
+    keydown = true;
+    playerDir = 1;
+    doodle.dx = 3;
+});
+
+rightBtn.addEventListener('mouseup', function() {
+    keydown = false;
+});
 requestAnimationFrame(loop);

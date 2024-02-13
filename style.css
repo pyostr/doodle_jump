@@ -1,6 +1,7 @@
 html,body{
     height: 100%;
     margin: 0;
+    overflow: hidden;
 }
 
 body{
@@ -13,4 +14,31 @@ body{
 canvas{
     background: white;
     border: 6px solid black;
+    height: 675px;
+    width: 375px;
+}
+
+#controls{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: space-between;
+    display: flex;
+    width: 80%
+}
+.btnControl{
+    border: none;
+    background: none;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-size: 50px;
+
+}
+@media screen and (max-height: 700px){
+    canvas{
+        height: 100vh;
+        width: 100vw;
+    }
 }
