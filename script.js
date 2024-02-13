@@ -217,4 +217,25 @@ rightBtn.addEventListener('mousedown', function() {
 rightBtn.addEventListener('mouseup', function() {
     keydown = false;
 });
+
+// Добавляем обработчики событий для кнопок для мобильных устройств
+leftBtn.addEventListener('touchstart', function() {
+    keydown = true;
+    playerDir = -1;
+    doodle.dx = -3;
+});
+
+leftBtn.addEventListener('touchend', function() {
+    keydown = false;
+});
+
+rightBtn.addEventListener('touchstart', function() {
+    keydown = true;
+    playerDir = 1;
+    doodle.dx = 3;
+});
+
+rightBtn.addEventListener('touchend', function() {
+    keydown = false;
+});
 requestAnimationFrame(loop);
