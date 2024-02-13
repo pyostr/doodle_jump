@@ -11,15 +11,14 @@ const platformStart = canvas.height - 50;
 
 // ПК
 
-// const gravity = 0.29;
-// const bounceVelocity = -12.5;
-
 // Мобильный
 
+// const gravity = 0.29;
+// const bounceVelocity = -12.5;
 const gravity = 0.59;
-const bounceVelocity = -19.5;
+const bounceVelocity = -17.5;
 
-const drag = 0.3;
+const drag = 10;
 
 
 let minPlatformSpace = 150;
@@ -197,7 +196,7 @@ document.addEventListener('keydown', function (e){
     }
 })
 
-document.addEventListener('keyup', function (e){
+document.addEventListener('keyup', function (){
     keydown = false;
 })
 
