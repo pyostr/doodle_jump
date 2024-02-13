@@ -5,7 +5,7 @@ const context = canvas.getContext('2d')
 let score = 0;
 
 
-const platformWidth = 65;
+const platformWidth = 80;
 const platformHeight = 20;
 const platformStart = canvas.height - 50;
 
